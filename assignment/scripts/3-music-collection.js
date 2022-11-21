@@ -15,3 +15,13 @@ console.log(addToCollection('Misty', 'Errol Garner', 1954));
 console.log(addToCollection('Are You Leaving For The Country', 'Karen Dalton', 1971));
 console.log(addToCollection('One Beer', 'MF DOOM', 2004));
 console.log('This is my collection: ', collection);
+
+function showCollection (collection) {
+    console.log(collection.length + ' songs in this collection.');
+
+    for (let i = 0; i < collection.length; i++) {
+        console.log(collection[i].title + ' by ' + collection[i].artist + ', published in ' + collection[i].yearPublished );
+    }
+}
+
+showCollection(collection);
