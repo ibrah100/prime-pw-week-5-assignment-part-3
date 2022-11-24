@@ -25,3 +25,39 @@ function showCollection (collection) {
 }
 
 showCollection(collection);
+
+function findByArtist (artist) {
+
+    let matchingArtists = collection.filter(element => element.artist === artist);
+
+    if (matchingArtists.length === 0) {
+        console.log("Artist not found in collection");
+    }
+
+    return matchingArtists;
+
+
+}
+
+console.log(findByArtist('Steve Monite'));
+console.log(findByArtist('King Krule'));
+console.log(findByArtist('Drake'));
+
+function search (artist, year) {
+    let searchResults = collection.filter(element => element.artist === artist && element.yearPublished == year);
+
+    if (artist == null || year == null) {
+        console.log(collection);
+    } else if (searchResults.length === 0) {
+        console.log("Not found");
+    } else {
+        return searchResults;
+    }
+
+
+}
+
+console.log(search('King Krule', 2013));
+
+console.log(search());
+
